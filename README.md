@@ -1,55 +1,55 @@
-# 怎么运行？
+# Pipeline to run this code
 
-### Step 1：数据准备
+### Step 1: Data preparation
 
-下载HPA数据，并放到 /input/hpa-single-cell-image-classification 下。
+Download HPA data and put it under /input/hpa-single-cell-image-classification.
 
-下载训练集Cell Mask(https://www.kaggle.com/its7171/hpa-mask)放到 /input/hpa-mask/train 下。
+Download the training set Cell Mask (https://www.kaggle.com/its7171/hpa-mask) and put it under /input/hpa-mask/train.
 
-* 对于公开数据集，需要运行/code/HPA-Cell-Segmentation/cell_mask.ipynb生成细胞分割图。
-
-
-
-### Step 2：安装依赖
-
-按照要求安装Cell Segmentation依赖。(https://github.com/CellProfiling/HPA-Cell-Segmentation)
-
-repo已经clone到 /code/ 里了。
+* For public data sets, you need to run /code/HPA-Cell-Segmentation/cell_mask.ipynb to generate cell segmentation maps.
 
 
 
-### Step 3：获得测试集合Mask
+### Step 2: Install dependencies
 
-运行 /code/HPA-Cell-Segmentation/cell_mask.ipynb 获得测试集Cell Mask。
+Install Cell Segmentation. (https://github.com/CellProfiling/HPA-Cell-Segmentation)
 
-
-
-### Step 4：训练数据生成
-
-运行 /code/cell_extract.ipynb 提取训练集和测试集的单细胞图像。
-
-* 对于整图，仅使用RGB通道，并缩放至1024*1024尺寸（Repo中不包含此部分代码）。
-* 可以根据绿色通道Max值重新分配细胞为类别18标签（Repo中不包含此部分代码）。
+The repo has been cloned to /code/.
 
 
 
-### Step 5：多标签分类训练
+### Step 3: Get the test set Mask
 
-运行 /code/classification-fastai.ipynb 多标签分类训练，并生成单细胞预测结果。
-
-* 对于不同模型和整图模型，需修改部分内容：模型类别、归一化的均值与方差、训练尺寸。
+Run /code/HPA-Cell-Segmentation/cell_mask.ipynb to get the Cell Mask of the test set.
 
 
 
-### Step 6：结果生成
+### Step 4: Training data generation
 
-运行 /code/generate_submission.ipynb 按照要求格式获得提交结果。
+Run /code/cell_extract.ipynb to extract single-cell images from the training set and test set.
+
+* For the entire image, only RGB channels are used and scaled to 1024*1024 size (this part of the code is not included in the Repo).
+* Cells can be re-assigned to category 18 tag according to the max value of the green channel (this part of the code is not included in this Repo).
 
 
 
-### Step 7：结果提交
+### Step 5: Multi-label classification training
 
-结果提交。
+Run /code/classification-fastai.ipynb multi-label classification training and generate single-cell prediction results.
+
+* For different cells model and whole image model, some code needs to be modified: model architecture, mean and std, and training image size.
+
+
+
+### Step 6: Results generation
+
+Run /code/generate_submission.ipynb to get the submission result in the required format.
+
+
+
+### Step 7: Results submission
+
+The results are submitted.
 
 
 
@@ -57,13 +57,13 @@ repo已经clone到 /code/ 里了。
 
 * /code/kaggle_submission.py
 
-  用于本地生成结果并提交。
+  Used to generate results locally and submit them.
 
 * /code/download_hpapublic.py
 
-  下载public dataset，但是比赛方提供的数据及其混乱，为节约时间，本文件下载的为jpg格式文件，而非原始分辨率文件。
+  Download the public dataset, but the data provided by the competition is messy. In order to save time, this file is downloaded in jpg format instead of the original resolution file.
 
-  你可以参考：
+  You can refer to:
 
   https://www.kaggle.com/lnhtrang/hpa-public-data-download-and-hpacellseg
 
@@ -71,24 +71,23 @@ repo已经clone到 /code/ 里了。
 
   https://www.kaggle.com/philculliton/hpa-challenge-2021-extra-train-images
 
-  简单来说，官方提供的包括三部分：
+  Simply put, the official offer includes three parts:
 
-  * tif.gz 原分辨率图像（官方demo下载下来为16位图像，保存为8位图像）
-  * jpg 图像
-  * 并非全集的 png 图像 dataset
+  * tif.gz original resolution image (the official demo is downloaded as a 16-bit image and saved as an 8-bit image)
+  * jpg image
+  * Not a complete png image dataset
 
-  另外，第一届比赛提供的HPAv18公开数据集约有78000张，目前提供的HPAPublic数据量约为80000张，交集为70000张。第一届的训练集也可以使用。
+  In addition, the HPAv18 public data set provided by the first competition is about 78,000. The current HPAPublic data set is about 80,000, and the intersection is 70,000. The first training set can also be used.
 
-  总结一下，目前可用的数据集包括：
+  To summarize, the currently available data sets include:
 
-  * 本届正式训练集
-  * 本届公开数据集
-  * 上届训练集（与本届公开数据集有交集）
-  * 上届公开数据集（与本届公开数据集有交集）
+  * HPA2's official training set
+  * HPA2's official public data set
+  * HPA1's training set (have intersection with the current training data set)
+  * HPA1's public data set (have intersection with the current public data set)
 
   
 
 ## Requirement
 
-fastai： 2.2.5
-
+fastai: 2.2.5
