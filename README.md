@@ -1,5 +1,7 @@
 # Pipeline to run this code
 
+### Some writes-up can be found in (https://www.dropbox.com/s/vuug46cdqk6noop/final%20-%20V2.pdf?dl=0)
+
 ### Step 1: Data preparation
 
 Download HPA data and put it under /input/hpa-single-cell-image-classification.
