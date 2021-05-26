@@ -1,3 +1,10 @@
+<img src="./figure/architecture.png" width="700px"></img>
+
+BYOL: https://github.com/lucidrains/byol-pytorch
+
+Cleanlab: https://github.com/cgnorthcutt/cleanlab
+
+
 # Pipeline to run this code
 
 ### Some writes-up can be found in (https://www.dropbox.com/s/vuug46cdqk6noop/final%20-%20V2.pdf?dl=0)
