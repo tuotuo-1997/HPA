@@ -1,8 +1,9 @@
 <img src="./figure/architecture.png" width="700px"></img>
 
-BYOL: https://github.com/lucidrains/byol-pytorch
 
-Cleanlab: https://github.com/cgnorthcutt/cleanlab
+
+Ming Feng,  Ph.D. condidate in Histopathological Image Analysis
+Kele Xu, Assistant Professor in Medical Image Analysis
 
 
 # Pipeline to run this code
