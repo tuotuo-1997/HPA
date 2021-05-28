@@ -3,9 +3,8 @@ Ming Feng,  Ph.D. condidate in Histopathological Image Analysis
 
 Kele Xu, Assistant Professor in Medical Image Analysis
 
-
+# Framework of our solution
 <img src="./figure/architecture.png" width="700px"></img>
-
 
 # Pipeline to run this code
 
