@@ -1,9 +1,10 @@
-<img src="./figure/architecture.png" width="700px"></img>
-
-
-
+# Team basic information
 Ming Feng,  Ph.D. condidate in Histopathological Image Analysis
+
 Kele Xu, Assistant Professor in Medical Image Analysis
+
+
+<img src="./figure/architecture.png" width="700px"></img>
 
 
 # Pipeline to run this code
