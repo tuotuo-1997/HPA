@@ -1,12 +1,6 @@
 # Framework of our solution
 <img src="./figure/architecture.png" width="700px"></img>
 
-
-# Team basic information
-Ming Feng,  Ph.D. candidate in Histopathological Image Analysis, Tongji University, Shanghai, China
-
-Kele Xu, Assistant Professor, Focus on Medical Image Analysis, National Key Laboratory of Parallel and Distributed Processing (PDL), Changsha, China
-
 # Pipeline to run this code
 
 ### Some writes-up can be found in (https://www.dropbox.com/s/vuug46cdqk6noop/final%20-%20V2.pdf?dl=0)
